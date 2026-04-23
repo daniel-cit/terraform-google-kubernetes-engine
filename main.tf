@@ -182,7 +182,7 @@ locals {
   Get available container engine versions
  *****************************************/
 data "google_container_engine_versions" "region" {
-  location = local.location
+  location = var.region
   project  = var.project_id
 }
 
@@ -192,6 +192,6 @@ data "google_container_engine_versions" "zone" {
   //     data.google_container_engine_versions.zone: Cannot determine zone: set in this resource, or set provider-level zone.
   //
   //TODO
-  location = local.location
+  location = var.region
   project  = var.project_id
 }
