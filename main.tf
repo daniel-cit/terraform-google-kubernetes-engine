@@ -191,6 +191,7 @@ data "google_container_engine_versions" "zone" {
   //
   //     data.google_container_engine_versions.zone: Cannot determine zone: set in this resource, or set provider-level zone.
   //
-  location = local.zone_count == 0 ? data.google_compute_zones.available[0].names[0] : var.zones[0]
+  //TODO
+  location = local.location
   project  = var.project_id
 }
